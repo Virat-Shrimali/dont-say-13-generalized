@@ -425,7 +425,6 @@ export default function App() {
     <Layout>
       <Card>
         <h2 className="text-xl font-bold mb-4">Don't Say {target}!</h2>
-        {renderNumberStrip()}
         <div className="mb-4">
           <p className="text-sm text-gray-500">Current Position:</p>
           <div className="text-3xl font-bold text-pink-600">{position}</div>
@@ -442,12 +441,12 @@ export default function App() {
           {!gameOver &&
             (mode === 'player' ||
               (mode === 'computer' && turn === 'Player')) && (
-              <div className="flex flex-wrap justify-center gap-2 mt-4">
+                <div className="flex flex-wrap justify-center gap-2 mt-4">
                 {steps.map((step) => (
                   <Button
-                    key={step}
-                    onClick={() => makeMove(step)}
-                    disabled={position + step > target}
+                  key={step}
+                  onClick={() => makeMove(step)}
+                  disabled={position + step > target}
                   >
                     +{step}
                   </Button>
@@ -459,9 +458,10 @@ export default function App() {
           variant="destructive"
           className="mt-6 w-full"
           onClick={resetGame}
-        >
+          >
           🔄 Restart Game
         </Button>
+          {renderNumberStrip()}
       </Card>
     </Layout>
   );
