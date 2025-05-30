@@ -454,7 +454,7 @@ export default function App() {
               </div>
             )}
         </div>
-        <div></div>
+        <p></p>
         <Button
           variant="destructive"
           className="mt-6 w-full"
@@ -462,7 +462,7 @@ export default function App() {
           >
           🔄 Restart Game
         </Button>
-        <div></div>
+        <p></p>
           {renderNumberStrip()}
       </Card>
     </Layout>
